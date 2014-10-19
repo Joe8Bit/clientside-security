@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1074.325px" height="534.693px" viewBox="0 -48.099 1074.325 534.693" enable-background="new 0 -48.099 1074.325 534.693"
+	 xml:space="preserve">
+<g>
+	<circle fill="#FFFFFF" stroke="#000000" stroke-width="3" stroke-miterlimit="10" cx="815.882" cy="243.297" r="239.189"/>
+	<text transform="matrix(1 0 0 1 759.2622 37.396)" font-family="'HelveticaNeue'" font-size="15.4831">Service/data tier</text>
+	<circle fill="#9BFFF5" stroke="#000000" stroke-width="3" stroke-miterlimit="10" cx="815.882" cy="276.584" r="161.203"/>
+	<text transform="matrix(1 0 0 1 795.9565 149.1069)" font-family="'HelveticaNeue'" font-size="15.4831">Client</text>
+	<circle fill="#16DBFF" stroke="#000000" stroke-width="3" stroke-miterlimit="10" cx="815.738" cy="248.242" r="49.93"/>
+	<text transform="matrix(1 0 0 1 794.231 253.9507)" font-family="'HelveticaNeue'" font-size="15.4831">Model</text>
+	<circle fill="#16DBFF" stroke="#000000" stroke-width="3" stroke-miterlimit="10" cx="744.098" cy="332.695" r="49.93"/>
+	<text transform="matrix(1 0 0 1 727.7632 338.4038)" font-family="'HelveticaNeue'" font-size="15.4831">View</text>
+	<circle fill="#16DBFF" stroke="#000000" stroke-width="3" stroke-miterlimit="10" cx="892.897" cy="329.179" r="49.93"/>
+	<text transform="matrix(1 0 0 1 859.0669 334.8862)" font-family="'HelveticaNeue'" font-size="15.4831">Controller</text>
+</g>
+<g>
+	<circle fill="#FFFFFF" stroke="#000000" stroke-width="3" stroke-miterlimit="10" cx="261.573" cy="241.842" r="239.189"/>
+	<text transform="matrix(1 0 0 1 204.9517 35.9409)" font-family="'HelveticaNeue'" font-size="15.4831">Service/data tier</text>
+	<circle fill="#9BFFF5" stroke="#000000" stroke-width="3" stroke-miterlimit="10" cx="261.573" cy="275.129" r="161.203"/>
+	<text transform="matrix(1 0 0 1 241.646 147.6519)" font-family="'HelveticaNeue'" font-size="15.4831">Client</text>
+</g>
+<text transform="matrix(1 0 0 1 238.353 -20.1001)" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="22">OLD</text>
+<text transform="matrix(1 0 0 1 790.2202 -20.1001)" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="22">NEW</text>
+</svg>

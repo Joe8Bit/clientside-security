@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1105.446px" height="506.975px" viewBox="0 0 1105.446 506.975" enable-background="new 0 0 1105.446 506.975"
+	 xml:space="preserve">
+<rect x="33.394" y="146.399" fill="#CC2727" stroke="#000000" stroke-width="3" stroke-miterlimit="10" width="148" height="82"/>
+<text transform="matrix(1 0 0 1 69.2241 181.8994)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="18">Malicious </tspan><tspan x="20.501" y="21.6" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="18">code</tspan></text>
+<rect x="264.394" y="22.399" fill="#FFFFFF" stroke="#000000" stroke-width="3" stroke-miterlimit="10" width="389" height="464"/>
+<text transform="matrix(1 0 0 1 278.5479 49.8994)" font-family="'HelveticaNeue'" font-size="18">Computer</text>
+<rect x="283.394" y="71.399" fill="#A6FFCE" stroke="#000000" stroke-width="3" stroke-miterlimit="10" width="342" height="178"/>
+<text transform="matrix(1 0 0 1 294.5518 98.8994)" font-family="'HelveticaNeue'" font-size="18">User mode</text>
+<rect x="311.394" y="119.399" fill="#F4FF4D" stroke="#000000" stroke-width="3" stroke-miterlimit="10" width="284" height="111"/>
+<text transform="matrix(1 0 0 1 327.4087 149.8994)" font-family="'HelveticaNeue'" font-size="18">Web Browser</text>
+<rect x="441.394" y="159.399" fill="#42FFF1" stroke="#000000" stroke-width="3" stroke-miterlimit="10" width="139" height="54"/>
+<text transform="matrix(1 0 0 1 484.5562 192.8994)" font-family="'HelveticaNeue'" font-size="18">WebGL</text>
+<rect x="282.394" y="281.399" fill="#FFCB79" stroke="#000000" stroke-width="3" stroke-miterlimit="10" width="342" height="178"/>
+<text transform="matrix(1 0 0 1 295.7119 308.8994)" font-family="'HelveticaNeue'" font-size="18">Kernel mode</text>
+<rect x="441.394" y="308.399" fill="#42FFF1" stroke="#000000" stroke-width="3" stroke-miterlimit="10" width="139" height="54"/>
+<text transform="matrix(1 0 0 1 469.897 338.8994)" font-family="'HelveticaNeue'" font-size="12">Graphics driver</text>
+<rect x="441.394" y="387.399" fill="#42FFF1" stroke="#000000" stroke-width="3" stroke-miterlimit="10" width="139" height="54"/>
+<text transform="matrix(1 0 0 1 461.9009 418.8994)" font-family="'HelveticaNeue'" font-size="12">Graphics hardware</text>
+<polygon points="414.79,189.734 414.791,183.624 437.894,183.624 428.156,173.313 432.165,169.446 447.886,186.313 433.374,203.353 
+	428.728,199.854 437.958,189.734 "/>
+<rect x="180.894" y="183.899" width="240" height="6"/>
+<polygon points="511.266,274.178 517.376,274.179 517.376,297.282 527.687,287.544 531.554,291.553 514.687,307.274 
+	497.648,292.762 501.146,288.116 511.266,297.346 "/>
+<rect x="510.894" y="210.899" width="7" height="66"/>
+<polygon points="511.059,362.399 517.169,362.4 517.169,385.504 527.48,375.766 531.347,379.774 514.48,395.496 497.441,380.983 
+	500.939,376.338 511.059,385.567 "/>
+<g>
+	<circle fill="#FFFFFF" stroke="#000000" stroke-width="3" stroke-miterlimit="10" cx="35.394" cy="146.399" r="19.5"/>
+	<text transform="matrix(1 0 0 1 28.2222 154.8994)" font-family="'HelveticaNeue'" font-size="24">1</text>
+</g>
+<g>
+	<circle fill="#FFFFFF" stroke="#000000" stroke-width="3" stroke-miterlimit="10" cx="580.394" cy="154.399" r="19.5"/>
+	<text transform="matrix(1 0 0 1 573.2222 162.8994)" font-family="'HelveticaNeue'" font-size="24">2</text>
+</g>
+<g>
+	<circle fill="#FFFFFF" stroke="#000000" stroke-width="3" stroke-miterlimit="10" cx="580.394" cy="307.399" r="19.5"/>
+	<text transform="matrix(1 0 0 1 573.2222 315.8994)" font-family="'HelveticaNeue'" font-size="24">3</text>
+</g>
+<g>
+	<circle fill="#FFFFFF" stroke="#000000" stroke-width="3" stroke-miterlimit="10" cx="580.394" cy="387.399" r="19.5"/>
+	<text transform="matrix(1 0 0 1 573.2222 395.8994)" font-family="'HelveticaNeue'" font-size="24">4</text>
+</g>
+<g>
+	<g>
+		<circle fill="#FFFFFF" stroke="#000000" stroke-width="3" stroke-miterlimit="10" cx="733.394" cy="41.399" r="19.5"/>
+		<text transform="matrix(1 0 0 1 726.2222 49.4736)" font-family="'HelveticaNeue'" font-size="24">1</text>
+	</g>
+	<text transform="matrix(1 0 0 1 765.894 36.8994)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="18">A user visits a site where a malicious</tspan><tspan x="0" y="21.6" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="18">script excutes some WebGL code</tspan></text>
+</g>
+<g>
+	<g>
+		<circle fill="#FFFFFF" stroke="#000000" stroke-width="3" stroke-miterlimit="10" cx="733.394" cy="102.974" r="19.5"/>
+		<text transform="matrix(1 0 0 1 726.2222 111.4736)" font-family="'HelveticaNeue'" font-size="24">2</text>
+	</g>
+	<text transform="matrix(1 0 0 1 765.894 98.8994)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="18">The WebGL component uploads some</tspan><tspan x="0" y="21.6" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="18">3D geometry and code to run in user</tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="18">mode</tspan></text>
+</g>
+<g>
+	<g>
+		<circle fill="#FFFFFF" stroke="#000000" stroke-width="3" stroke-miterlimit="10" cx="733.394" cy="183.399" r="19.5"/>
+		<text transform="matrix(1 0 0 1 726.2222 191.8994)" font-family="'HelveticaNeue'" font-size="24">3</text>
+	</g>
+	<text transform="matrix(1 0 0 1 765.894 179.3252)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="18">The geometry exploits buggy or old </tspan><tspan x="0" y="21.6" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="18">graphics drivers or implementations</tspan></text>
+</g>
+<g>
+	<g>
+		<circle fill="#FFFFFF" stroke="#000000" stroke-width="3" stroke-miterlimit="10" cx="733.394" cy="255.399" r="19.5"/>
+		<text transform="matrix(1 0 0 1 726.2222 263.4736)" font-family="'HelveticaNeue'" font-size="24">4</text>
+	</g>
+	<text transform="matrix(1 0 0 1 765.894 250.8994)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="18">The graphics hardware can be attacked</tspan><tspan x="0" y="21.6" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="18">and code potentiallt run in kernel mode</tspan></text>
+</g>
+</svg>

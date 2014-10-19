@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Security - Joe Pettersson</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/joep.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div id="border"></div>
+
+		<div id="hashtag" class="tk-proxima-nova-soft">#fullstackcon</div>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section id="intro" data-transition="zoom" data-background-transition="zoom">
+					<h1>Security in the client</h1>
+					<h3>How the ecosystem is changing and so should we</h3>
+					<h4>Friday 24th of October 2014 <a href="https://joe8bit.com/talk/fullstack/">joe8bit.com/talk/fullstack/</a></h4>
+				</section>
+
+				<section data-transition="zoom" data-background-transition="zoom" id="who">
+					<h1>Joe Pettersson</h1>
+					<h3><a href="https://twitter.com/Joe8bit">@Joe8Bit</a> | <a href="https://github.com/Joe8Bit">github.com/Joe8Bit</a></h3>
+				</section>
+
+				<section id="where" data-background="#002960" data-transition="zoom" style="text-align: center;">
+					<img src="./imgs/mckinsey.svg" alt="McKinsey & Company" class="no-shadow">
+				</section>
+
+				<section id="why">
+					<h4>Why?</h4>
+					<h3>We don't think about security enough</h3>
+				</section>
+
+				<section id="fundamentally">
+					<h4>The fundamental problem</h4>
+					<h3>The 'Client' Environment</h3>
+				</section>
+
+				<section id="untrustworthy">
+					<blockquote>An environment where your code runs that you don't control is a <span class="large">fundamentally</span> untrustworthy one</blockquote>
+				</section>
+
+				<section id="strong-decoupling">
+					<h4>Something you know already</h4>
+					<h3>Strong decoupling</h3>
+					<p>e.g. never trust the client</p>
+				</section>
+
+				<section data-transition="fade" id="back-to-front" class="center">
+					<img src="./imgs/whitebox.svg" alt="Blackbox" class="no-shadow">
+				</section>
+
+				<section id="bidirectional-decoupling">
+					<h4>Something you need to think about</h4>
+					<h3>Bi-directional decoupling</h3>
+					<p>e.g. never trust the data layer either</p>
+				</section>
+
+				<section data-transition="fade" id="front-to-back" class="center">
+					<img src="./imgs/whitebox2.svg" alt="Blackbox" class="no-shadow">
+				</section>
+
+				<section class="listing" id="blackbox-example">
+					<h4>Example</h4>
+					<h3>A client side HTTP interface shouldn't inherently trust output from a service it's utilising</h3>
+					<br>
+					<h4>Exploited</h4>
+					<h3>Generic stored/reflected XSS attacks</h3>
+				</section>
+
+				<section id="multi-tiered">
+					<h3>We need to learn from <em>decades</em> of network security models and enforce multi-tiered trust boundries</h3>
+				</section>
+
+				<section id="network-security-models">
+					<ul>
+						<li>Coherent network topologies</li>
+						<li>DMZ's</li>
+						<li>Sanitised communication channels</li>
+						<li>Standardised and verifiable interfaces</li>
+					</ul>
+				</section>
+
+				<section class="listing" id="think-clients">
+					<h3>Modular apps need modular security</h3>
+				</section>
+
+				<section id="trust-models">
+					<img src="./imgs/trust-models.svg" alt="Trust Models" class="no-shadow">
+				</section>
+
+				<section class="listing" id="xss-antipattern">
+					<h4>Anti-pattern</h4>
+					<h3>A view implicitly trusting output from a model</h3>
+					<h4>Pattern</h4>
+					<h3>The DOM provides a big attack surface for XSS attacks so all interactions with it should be sanitised, regardless of their source</h3>
+				</section>
+
+				<section id="more-complex" data-background="#BD4932">
+					<h2>The concepts in clientside security are getting more complex</h2>
+				</section>
+
+				<section class="listing" data-background="#BD4932" data-transition="fade" data-background-transition="fade" id="clientside-attacks">
+					<h4>Purely clientside attacks</h4>
+					<ul>
+						<li>Content spoofing</li>
+						<li>Cross Site Scripting (XSS)</li>
+						<li>Cross Site Request Forgery (CSRF)</li>
+						<li>Information disclosure/leakage</li>
+						<li>Path traversal attacks</li>
+						<li>Authentication attacks</li>
+						<li>Cache poisoning</li>
+						<li>...</li>
+						<li>A new generation of APIs</li>
+					</ul>
+				</section>
+
+				<section class="listing" data-background="#BD4932" id="communication-apis">
+					<h4>Communication API's</h4>
+					<h3>Web Messaging / Cross Domain Messaging</h3>
+					<small>
+					<ul>
+						<li >Sender: explicitly state the expected origin as the second argument to <code>postMessage</code> rather than <code>*</code></li>
+						<li >Receiver: always check the <code>origin</code> attribute of the sender to verify the data is originating from the expected location</li>
+					</ul>
+					</small>
+				</section>
+
+				<section class="listing" data-background="#BD4932" id="validating-fqdns">
+					<h4>Validating FQDN's</h4>
+					<pre><code data-trim>
+if (message.origin.indexOf("foo.com") !== -1) { /* ... */ }
+    				</code></pre>
+    				<p><small>This is very insecure as <code>foo.com.attacker.com</code> will match, this goes for validating <em>all</em> FQDN's</small></p>
+				</section>
+
+				<section class="listing" data-background="#BD4932" id="storage-apis">
+					<h4>Storage API's</h4>
+					<h3>Storing data in the client</h3>
+					<small>
+					<ul>
+						<li >Don't store sensitive information in <code>localStorage</code>/<code>IndexDB</code> (dump and pump attacks, no content protection like cookies)</li>
+						<li >Use <code>sessionStorage</code> instead of <code>localStorage</code> if persistent storage is not needed</li>
+						<li >Every object is shared within an origin and protected with the Same Origin Policy. Avoid host multiple applications on the same origin that utilise <code>localStorage</code></li>
+						<li >Watch out for cache poisoning when caching assets to <code>localStorage</code></li>
+						<li>SQL injection in WebSQL</li>
+					</ul>
+					</small>
+				</section>
+
+				<section class="listing" data-background="#BD4932" id="multithreading">
+					<h4>Multithreading API's</h4>
+					<h3>WebWorkers</h3>
+					<small>
+					<ul>
+						<li >It's trivially easy to perform DOS attacks that exploit resource heavy CPU opertions (e.g. recursive Fibonacci factoring) in WebWorkers, in some cases bricking the client</li>
+					</ul>
+					</small>
+				</section>
+
+				<section class="listing" data-background="#BD4932" id="iframes">
+					<h4>Misc. API's</h4>
+					<h3>iFrame's</h3>
+					<small>
+					<ul>
+						<li>Since their inception have been a massive attack vector</li>
+						<li>
+							Use the <code>sandbox</code> attribute of an iframe for untrusted content (allow-forms, allow-popups, allow-pointer-lock, allow-same-origin, allow-scripts, allow-top-navigation)
+						</li>
+					</ul>
+					</small>
+				</section>
+
+				<section class="listing" data-background="#BD4932" id="offline">
+					<h4>Misc API's</h4>
+					<h3>Offline applications</h3>
+					<small>
+						<ul>
+							<li >Cache poisoning <code>manifest</code> files through MITM attacks over insecure networks. Use HTTPS.</li>
+							<li>ServiceWorkers? A potential solution</li>
+						</ul>
+					</small>
+				</section>
+
+				<section id="webgl" data-background="#cf9430">
+					<h2>WebGL</h2>
+				</section>
+
+				<section id="what-is-webgl" data-background="#cf9430">
+					<blockquote>
+						WebGL is a cross-platform, royalty-free web standard for a low-level 3D graphics API based on OpenGL ES 2.0, exposed through the HTML5 Canvas element as Document Object Model interfaces.
+					</blockquote>
+				</section>
+
+				<section id="sandbox" data-background="#cf9430">
+					<h3>Punching a big hole through the sandbox, it needs to be "secure"</h3>
+				</section>
+
+				<section class="listing" id="security-and-webgl" data-background="#cf9430">
+					<h4>Security as part of the spec design</h4>
+					<ul>
+						<li>Undefined behaviours as part of OpenGL ES spec (e.g. readPixels API, extending outside the framebuffer)</li>
+						<li>Strict definition of out of range memory access (not in OpenGL specs)</li>
+						<li>All GPU resources allocated by a WebGL application are initially cleared to zero, in OpenGL these buffers are not zero'd before allocation</li>
+						<li>Strong OpenGL ES Shading Language (ESSL) validation, imposed limitations on loops and indexing expressions</li>
+						<li>DOS mitigation via <code>GL_ARB_robustness</code></li>
+					</ul>
+				</section>
+
+				<section id="drivers-are-awful" data-background="#cf9430">
+					<h3>GPU drivers are awful<sup><small>1</small></sup></h3>
+					<h4><sup><small>1</small></sup><a href="https://code.google.com/p/chromium/codesearch#chromium/src/gpu/config/gpu_driver_bug_list_json.cc">gpu_driver_bug_list_json.cc</a></h4>
+				</section>
+
+				<section id="drivers-are-out-of-date" data-background="#cf9430">
+					<h3>GPU drivers are usually out of date<sup><small>1</small></sup></h3>
+					<h4><sup><small>1</small></sup><a href="http://store.steampowered.com/hwsurvey/videocard/">25% of Steam users using DirectX 10 capabale</a></h4>
+				</section>
+
+				<section id="angle" data-background="#cf9430">
+					<h3>Angle</h3>
+					<ul>
+						<li><a href="https://code.google.com/p/angleproject/">code.google.com/p/angleproject/</a></li>
+						<li>The default WebGL backend for Chrome and Firefox</li>
+						<li>OpenGL to DirectX transpiler on Windows</li>
+						<li>Shader validation and translation on OSX and Linux</li>
+					</ul>
+				</section>
+
+				<section id="blacklisting-drivers" data-background="#cf9430">
+					<h3>Driver blacklisting</h3>
+					<p><a href="https://www.khronos.org/webgl/wiki/BlacklistsAndWhitelists">khronos.org/webgl/wiki/BlacklistsAndWhitelists</a></p>
+				</section>
+
+				<section id="webgls-fundamental-change" data-background="#cf9430">
+					<h3>Which leads us to WebGL's biggest (unmitigatable) issue...</h3>
+				</section>
+
+				<section class="listing" id="execution-context" data-background="#cf9430">
+					<h4>Classic browser execution context</h4>
+					<h3>Browser sandboxes -> OS User Mode</h3>
+					<h4>WebGL execution context</h4>
+					<h3>Browser sandboxes -> OS Kernal Mode -> Hardware drivers</h3>
+				</section>
+
+				<section class="listing" id="webgl-attack" data-background="#cf9430">
+					<h4>An attacked WebGL call stack</h4>
+					<img src="./imgs/webgl.svg" alt="WebGL" class="no-shadow">
+				</section>
+
+				<section id="testing" data-background="#5C832F">
+					<h2>Testing</h2>
+					<h3>How security can fit into your process</h3>
+				</section>
+
+				<section id="auditing" data-background="#5C832F">
+					<h2>Auditing</h2>
+					<p>Security as a requirement for quality</p>
+				</section>
+
+				<section class="listing" id="auditing-goals" data-background="#5C832F">
+					<ul>
+						<li>Where are your integration points?</li>
+						<li>Where are your 'trust' boundries?</li>
+						<li>What is the breadth and depth of your attack surface?</li>
+						<li>What are the fundamental security implications of your technology choices?</li>
+						<li>Auditing === understanding risk</li>
+					</ul>
+				</section>
+
+				<section id="auditing-async" data-background="#5C832F">
+					<h2>Auditing is asynchronous</h2>
+					<p>Fits perfectly into the 'Github flow' model. Merger takes co-ownership of security consequences of merged code, as they should with quality and regressions</p>
+				</section>
+
+				<section id="scanning" data-background="#5C832F">
+					<h2>Automated Scanning</h2>
+				</section>
+
+				<section id="pentest-vs-vulnscan" class="center" data-background="#5C832F">
+					<h4>Penetration test <small>vs</small> Vulnerability scan</h4>
+					<br>
+					<img src="./imgs/venn.png" alt="Venn" class="no-shadow" style="width: 60%">
+				</section>
+
+				<section class="listing" id="tools" data-background="#5C832F">
+					<h4>Tools</h4>
+					<ul>
+						<li>AppScan from IBM ($$$$)</li>
+						<li>WebInspect from HP ($$$$)</li>
+						<li>Burp Suite from Portswigger ($$)</li>
+						<li>Metasploit (Free or $$)</li>
+					</ul>
+				</section>
+
+				<section class="listing" id="in-ci" data-background="#5C832F">
+					<h4>Scanning and regression testing in CI environments</h4>
+					<h3>Chef + Metaspolit + Jenkins</h3>
+					<p><small>Security regression testing in your CI environment<br><a href="https://github.com/rapid7/Chef-Metasploit">github.com/rapid7/Chef-Metasploit</a></small></p>
+				</section>
+
+				<section class="listing" id="how" data-background="#5C832F">
+					<h4>Testing environment</h4>
+					<h3>Seriously</h3>
+					<ul>
+						<li>Do not do it in production. It's a shortcut, but you will break things</li>
+						<li>But must accuratley represent your production environment in all ways</li>
+					</ul>
+				</section>
+
+				<section id="thanks">
+					<h2>Thanks</h2>
+					<h4><a href="https://twitter.com/Joe8bit">@Joe8Bit</a> | <a href="https://github.com/Joe8Bit">github.com/Joe8Bit</a></h4>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script src="//use.typekit.net/jii7zso.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+				overview: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
