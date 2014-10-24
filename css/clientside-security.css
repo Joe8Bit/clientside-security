@@ -59,11 +59,22 @@ section {
   font-size: 1em;
 }
 
+svg.center {
+  display: block;
+  margin: 0 auto !important;
+}
+
+.trust-boundry {
+  stroke: #ea5555;
+  stroke-width: 8px;
+}
+
 #fundamentally h4,
 #strong-decoupling h4,
 #bidirectional-decoupling h4,
 #blackbox-example h4,
 .listing h4,
+#network-security-models h4,
 #auditing p {
   font-family: "adobe-caslon-pro", sans-serif;
   font-style: italic;
@@ -149,7 +160,7 @@ section.center {
 
 #strong-decoupling p,
 #bidirectional-decoupling p {
-  margin-top: 0.5em;
+  margin-top: 0.7em;
   font-size: 0.9em;
 }
 

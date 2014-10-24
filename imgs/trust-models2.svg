@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1074.325px" height="755.847px" viewBox="0 0 1074.325 755.847" enable-background="new 0 0 1074.325 755.847"
+	 xml:space="preserve">
+<g>
+	<g>
+		<circle fill="#FFFFFF" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" cx="794.784" cy="184.343" r="181.69"/>
+		<text transform="matrix(1 0 0 1 729.314 187.2529)" fill="#020202" font-family="'HelveticaNeue-Bold'" font-size="32">Data tier</text>
+	</g>
+	<g>
+		<circle fill="#FFFFFF" cx="790.36" cy="566.24" r="187.547"/>
+		<text transform="matrix(1 0 0 1 746.1792 436.332)" font-family="'HelveticaNeue-Bold'" font-size="32">Client</text>
+		<circle fill="#CCCCCC" cx="878.194" cy="631.521" r="58.09"/>
+		<text transform="matrix(1 0 0 1 853.1714 638.1631)" font-family="'HelveticaNeue'" font-size="18.0134">Model</text>
+		<circle fill="#CCCCCC" cx="706.845" cy="631.521" r="58.09"/>
+		<text transform="matrix(1 0 0 1 687.8413 638.1631)" font-family="'HelveticaNeue'" font-size="18.0134">View</text>
+		<g>
+			<path fill="#CCCCCC" d="M792.52,469.253c32.082,0,58.088,26.007,58.088,58.089c0,32.083-26.006,58.089-58.088,58.089
+				c-32.084,0-58.09-26.006-58.09-58.089C734.43,495.26,760.436,469.253,792.52,469.253z"/>
+			<text transform="matrix(1 0 0 1 753.1616 533.9814)" font-family="'HelveticaNeue'" font-size="18.0134">Controller</text>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<circle fill="#FFFFFF" cx="298.436" cy="241.842" r="239.189"/>
+		<text transform="matrix(1 0 0 1 172.8535 125.9404)" font-family="'HelveticaNeue-Bold'" font-size="32">Core application</text>
+	</g>
+	<g>
+		<circle fill="#CCCCCC" cx="298.436" cy="335.383" r="124.203"/>
+		<text transform="matrix(1 0 0 1 264.2144 340.0166)" font-family="'HelveticaNeue-Bold'" font-size="24.6552">Client</text>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 238.3535 -20.0996)" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="22">OLD</text>
+<text transform="matrix(1 0 0 1 764.6958 -20.0996)" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="22">NEW</text>
+</svg>

@@ -58,30 +58,27 @@
 
 				<section id="strong-decoupling">
 					<h4>Something you know already</h4>
-					<h3>Strong decoupling</h3>
+					<h2>Strong decoupling</h2>
 					<p>e.g. never trust the client</p>
-				</section>
-
-				<section data-transition="fade" id="back-to-front" class="center">
-					<img src="./imgs/whitebox.svg" alt="Blackbox" class="no-shadow">
 				</section>
 
 				<section id="bidirectional-decoupling">
 					<h4>Something you need to think about</h4>
-					<h3>Bi-directional decoupling</h3>
+					<h2>Bi-directional decoupling</h2>
 					<p>e.g. never trust the data layer either</p>
 				</section>
 
 				<section data-transition="fade" id="front-to-back" class="center">
+					<img src="./imgs/whitebox.svg" alt="Blackbox" class="no-shadow" style="margin-right: 10%;">
 					<img src="./imgs/whitebox2.svg" alt="Blackbox" class="no-shadow">
 				</section>
 
 				<section class="listing" id="blackbox-example">
-					<h4>Example</h4>
-					<h3>A client side HTTP interface shouldn't inherently trust output from a service it's utilising</h3>
+					<h4>Anti-pattern</h4>
+					<h3>A client side HTTP interface inherently trusting output from a service it's utilising</h3>
 					<br>
-					<h4>Exploited</h4>
-					<h3>Generic stored/reflected XSS attacks</h3>
+					<h4>Attack vector</h4>
+					<h3>Stored/reflected XSS</h3>
 				</section>
 
 				<section id="multi-tiered">
@@ -89,6 +86,7 @@
 				</section>
 
 				<section id="network-security-models">
+					<h4>Topics to consider</h4>
 					<ul>
 						<li>Coherent network topologies</li>
 						<li>DMZ's</li>
@@ -101,8 +99,184 @@
 					<h3>Modular apps need modular security</h3>
 				</section>
 
-				<section id="trust-models">
-					<img src="./imgs/trust-models.svg" alt="Trust Models" class="no-shadow">
+				<section id="old-model" data-transition="fade" data-background-transition="fade">
+
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 width="537.74px" height="532.329px" viewBox="0 0 537.74 532.329" enable-background="new 0 0 537.74 532.329"
+						 xml:space="preserve" class="center">
+					<g>
+						<g>
+							<circle fill="#01A2A6" cx="268.87" cy="266.165" r="239.189" />
+							<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M299.017,145.554L299.017,145.554l-28.973,11.989
+								c-0.006,0.002-0.01,0.004-0.014,0.006l-0.014,0.006v-0.001c-0.354,0.146-0.741,0.229-1.146,0.229
+								c-0.406,0-0.793-0.083-1.147-0.229v0.001l-0.013-0.006c-0.006-0.002-0.01-0.004-0.014-0.006l-28.974-11.988v-0.001
+								c-1.087-0.451-1.853-1.521-1.853-2.771c0-1.657,1.343-3,3-3c0.406,0,0.793,0.083,1.147,0.229l0,0l0.014,0.006
+								c0.004,0.001,0.008,0.003,0.013,0.005l27.827,11.514l27.826-11.514c0.004-0.002,0.008-0.004,0.014-0.005l0.014-0.006l0,0
+								c0.354-0.146,0.74-0.229,1.146-0.229c1.656,0,3,1.343,3,3C300.87,144.033,300.104,145.103,299.017,145.554 M299.017,132.554
+								L299.017,132.554l-28.973,11.989c-0.006,0.002-0.01,0.004-0.014,0.006l-0.014,0.006v-0.001c-0.354,0.146-0.741,0.229-1.146,0.229
+								c-0.406,0-0.793-0.083-1.147-0.229v0.001l-0.013-0.006c-0.006-0.002-0.01-0.004-0.014-0.006l-28.974-11.988v-0.001
+								c-1.087-0.451-1.853-1.521-1.853-2.771s0.766-2.32,1.853-2.771l0,0l28.974-11.989c0.004-0.002,0.008-0.004,0.014-0.006
+								l0.013-0.005l0,0c0.354-0.146,0.741-0.229,1.147-0.229c0.405,0,0.793,0.083,1.146,0.229l0,0l0.014,0.005
+								c0.004,0.002,0.008,0.004,0.014,0.006l28.973,11.989l0,0c1.088,0.451,1.854,1.521,1.854,2.771S300.104,132.103,299.017,132.554
+								 M239.87,152.782c0.406,0,0.793,0.083,1.147,0.229l0,0l0.014,0.006c0.004,0.001,0.008,0.003,0.013,0.005l27.827,11.514
+								l27.826-11.514c0.004-0.002,0.008-0.004,0.014-0.005l0.014-0.006l0,0c0.354-0.146,0.74-0.229,1.146-0.229c1.656,0,3,1.343,3,3
+								c0,1.25-0.766,2.32-1.854,2.771v0.001l-28.973,11.988c-0.006,0.002-0.01,0.004-0.014,0.006l-0.014,0.006v-0.001
+								c-0.354,0.146-0.741,0.229-1.146,0.229c-0.406,0-0.793-0.083-1.147-0.229v0.001l-0.013-0.006c-0.006-0.002-0.01-0.004-0.014-0.006
+								l-28.974-11.988v-0.001c-1.087-0.451-1.853-1.521-1.853-2.771C236.87,154.125,238.212,152.782,239.87,152.782"/>
+						</g>
+						<g>
+							<circle fill="#29D9C2" cx="268.87" cy="364.81" r="93.798"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M297.87,392.809h-58c-1.657,0-3-1.342-3-3v-50
+								c0-1.656,1.343-3,3-3h58c1.656,0,3,1.344,3,3v50C300.87,391.467,299.526,392.809,297.87,392.809 M285.87,389.809h12v-26h-1.6
+								h-10.4V389.809z M239.87,389.809h43v-26h-43V389.809z M242.87,339.809c-1.657,0-3,1.344-3,3c0,1.658,1.343,3,3,3s3-1.342,3-3
+								C245.87,341.153,244.527,339.809,242.87,339.809 M251.87,339.809c-1.657,0-3,1.344-3,3c0,1.658,1.343,3,3,3s3-1.342,3-3
+								C254.871,341.153,253.527,339.809,251.87,339.809 M260.871,339.809c-1.658,0-3,1.344-3,3c0,1.658,1.342,3,3,3c1.656,0,3-1.342,3-3
+								C263.87,341.153,262.526,339.809,260.871,339.809 M294.87,348.809h-52h-3v12h43h3h10.4h1.6v-12H294.87z"/>
+						</g>
+					</g>
+					</svg>
+
+				</section>
+
+				<section id="old-model-trust-boundry" data-transition="fade" data-background-transition="fade">
+
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 width="537.74px" height="532.329px" viewBox="0 0 537.74 532.329" enable-background="new 0 0 537.74 532.329"
+						 xml:space="preserve" class="center">
+					<g>
+						<g>
+							<circle fill="#01A2A6" cx="268.87" cy="266.165" r="239.189" class="trust-boundry" />
+							<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M299.017,145.554L299.017,145.554l-28.973,11.989
+								c-0.006,0.002-0.01,0.004-0.014,0.006l-0.014,0.006v-0.001c-0.354,0.146-0.741,0.229-1.146,0.229
+								c-0.406,0-0.793-0.083-1.147-0.229v0.001l-0.013-0.006c-0.006-0.002-0.01-0.004-0.014-0.006l-28.974-11.988v-0.001
+								c-1.087-0.451-1.853-1.521-1.853-2.771c0-1.657,1.343-3,3-3c0.406,0,0.793,0.083,1.147,0.229l0,0l0.014,0.006
+								c0.004,0.001,0.008,0.003,0.013,0.005l27.827,11.514l27.826-11.514c0.004-0.002,0.008-0.004,0.014-0.005l0.014-0.006l0,0
+								c0.354-0.146,0.74-0.229,1.146-0.229c1.656,0,3,1.343,3,3C300.87,144.033,300.104,145.103,299.017,145.554 M299.017,132.554
+								L299.017,132.554l-28.973,11.989c-0.006,0.002-0.01,0.004-0.014,0.006l-0.014,0.006v-0.001c-0.354,0.146-0.741,0.229-1.146,0.229
+								c-0.406,0-0.793-0.083-1.147-0.229v0.001l-0.013-0.006c-0.006-0.002-0.01-0.004-0.014-0.006l-28.974-11.988v-0.001
+								c-1.087-0.451-1.853-1.521-1.853-2.771s0.766-2.32,1.853-2.771l0,0l28.974-11.989c0.004-0.002,0.008-0.004,0.014-0.006
+								l0.013-0.005l0,0c0.354-0.146,0.741-0.229,1.147-0.229c0.405,0,0.793,0.083,1.146,0.229l0,0l0.014,0.005
+								c0.004,0.002,0.008,0.004,0.014,0.006l28.973,11.989l0,0c1.088,0.451,1.854,1.521,1.854,2.771S300.104,132.103,299.017,132.554
+								 M239.87,152.782c0.406,0,0.793,0.083,1.147,0.229l0,0l0.014,0.006c0.004,0.001,0.008,0.003,0.013,0.005l27.827,11.514
+								l27.826-11.514c0.004-0.002,0.008-0.004,0.014-0.005l0.014-0.006l0,0c0.354-0.146,0.74-0.229,1.146-0.229c1.656,0,3,1.343,3,3
+								c0,1.25-0.766,2.32-1.854,2.771v0.001l-28.973,11.988c-0.006,0.002-0.01,0.004-0.014,0.006l-0.014,0.006v-0.001
+								c-0.354,0.146-0.741,0.229-1.146,0.229c-0.406,0-0.793-0.083-1.147-0.229v0.001l-0.013-0.006c-0.006-0.002-0.01-0.004-0.014-0.006
+								l-28.974-11.988v-0.001c-1.087-0.451-1.853-1.521-1.853-2.771C236.87,154.125,238.212,152.782,239.87,152.782"/>
+						</g>
+						<g>
+							<circle fill="#29D9C2" cx="268.87" cy="364.81" r="93.798" class="trust-boundry"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M297.87,392.809h-58c-1.657,0-3-1.342-3-3v-50
+								c0-1.656,1.343-3,3-3h58c1.656,0,3,1.344,3,3v50C300.87,391.467,299.526,392.809,297.87,392.809 M285.87,389.809h12v-26h-1.6
+								h-10.4V389.809z M239.87,389.809h43v-26h-43V389.809z M242.87,339.809c-1.657,0-3,1.344-3,3c0,1.658,1.343,3,3,3s3-1.342,3-3
+								C245.87,341.153,244.527,339.809,242.87,339.809 M251.87,339.809c-1.657,0-3,1.344-3,3c0,1.658,1.343,3,3,3s3-1.342,3-3
+								C254.871,341.153,253.527,339.809,251.87,339.809 M260.871,339.809c-1.658,0-3,1.344-3,3c0,1.658,1.342,3,3,3c1.656,0,3-1.342,3-3
+								C263.87,341.153,262.526,339.809,260.871,339.809 M294.87,348.809h-52h-3v12h43h3h10.4h1.6v-12H294.87z"/>
+						</g>
+					</g>
+					</svg>
+
+				</section>
+
+				<section id="new-model" data-transition="fade" data-background-transition="fade">
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 width="424.04px" height="700px" viewBox="0 0 424.04 800" enable-background="new 0 0 424.04 800" xml:space="preserve" class="center">
+					<g>
+						<g>
+							<circle fill="#01A2A6" cx="214.374" cy="207.343" r="181.69"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M244.522,210.114L244.522,210.114l-28.973,11.989
+								c-0.006,0.002-0.01,0.004-0.014,0.006l-0.014,0.006v-0.001c-0.354,0.146-0.742,0.229-1.146,0.229
+								c-0.406,0-0.793-0.083-1.148-0.229v0.001l-0.012-0.006c-0.006-0.002-0.01-0.004-0.014-0.006l-28.975-11.988v-0.001
+								c-1.087-0.451-1.853-1.521-1.853-2.771c0-1.657,1.343-3,3-3c0.406,0,0.793,0.083,1.147,0.229l0,0l0.014,0.006
+								c0.004,0.001,0.008,0.003,0.013,0.005l27.828,11.514l27.826-11.514c0.004-0.002,0.008-0.004,0.014-0.005l0.014-0.006l0,0
+								c0.354-0.146,0.74-0.229,1.146-0.229c1.656,0,3,1.343,3,3C246.376,208.594,245.61,209.663,244.522,210.114 M244.522,197.114
+								L244.522,197.114l-28.973,11.989c-0.006,0.002-0.01,0.004-0.014,0.006l-0.014,0.006v-0.001c-0.354,0.146-0.742,0.229-1.146,0.229
+								c-0.406,0-0.793-0.083-1.148-0.229v0.001l-0.012-0.006c-0.006-0.002-0.01-0.004-0.014-0.006l-28.975-11.988v-0.001
+								c-1.087-0.451-1.853-1.521-1.853-2.771s0.766-2.32,1.853-2.771l0,0l28.975-11.989c0.004-0.002,0.008-0.004,0.014-0.006
+								l0.012-0.005l0,0c0.355-0.146,0.742-0.229,1.148-0.229c0.404,0,0.793,0.083,1.146,0.229l0,0l0.014,0.005
+								c0.004,0.002,0.008,0.004,0.014,0.006l28.973,11.989l0,0c1.088,0.451,1.854,1.521,1.854,2.771S245.61,196.663,244.522,197.114
+								 M185.375,217.343c0.406,0,0.793,0.083,1.147,0.229l0,0l0.014,0.006c0.004,0.001,0.008,0.003,0.013,0.005l27.828,11.514
+								l27.826-11.514c0.004-0.002,0.008-0.004,0.014-0.005l0.014-0.006l0,0c0.354-0.146,0.74-0.229,1.146-0.229c1.656,0,3,1.343,3,3
+								c0,1.25-0.766,2.32-1.854,2.771v0.001l-28.973,11.988c-0.006,0.002-0.01,0.004-0.014,0.006l-0.014,0.006v-0.001
+								c-0.354,0.146-0.742,0.229-1.146,0.229c-0.406,0-0.793-0.083-1.148-0.229v0.001l-0.012-0.006c-0.006-0.002-0.01-0.004-0.014-0.006
+								l-28.975-11.988v-0.001c-1.087-0.451-1.853-1.521-1.853-2.771C182.375,218.686,183.717,217.343,185.375,217.343"/>
+						</g>
+						<g>
+							<circle fill="#29D9C2" cx="214.375" cy="589.24" r="187.547"/>
+							<g>
+								<g>
+									<circle fill="#FFFFFF" cx="288.671" cy="662.714" r="49.896"/>
+									<text transform="matrix(1 0 0 1 265.7646 668.4189)" fill="#29D9C2" font-family="'HelveticaNeue-Bold'" font-size="15.4726">Model</text>
+								</g>
+								<g>
+									<circle fill="#FFFFFF" cx="141.33" cy="662.714" r="49.896"/>
+									<text transform="matrix(1 0 0 1 123.9155 668.4189)" fill="#29D9C2" font-family="'HelveticaNeue-Bold'" font-size="15.4726">View</text>
+								</g>
+								<g>
+									<circle fill="#FFFFFF" cx="215.875" cy="573.229" r="49.896"/>
+									<text transform="matrix(1 0 0 1 179.0659 578.9316)" fill="#29D9C2" font-family="'HelveticaNeue-Bold'" font-size="15.4726">Controller</text>
+								</g>
+							</g>
+							<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M245.374,493.973h-57.999c-1.657,0-3-1.342-3-3v-50
+								c0-1.656,1.343-3,3-3h57.999c1.656,0,3,1.344,3,3v50C248.374,492.631,247.03,493.973,245.374,493.973 M233.374,490.973h12v-26
+								h-1.6h-10.4V490.973z M187.375,490.973h42.999v-26h-42.999V490.973z M190.375,440.973c-1.657,0-3,1.344-3,3c0,1.658,1.343,3,3,3
+								s3-1.342,3-3C193.375,442.316,192.032,440.973,190.375,440.973 M199.375,440.973c-1.657,0-3,1.344-3,3c0,1.658,1.343,3,3,3
+								s3-1.342,3-3C202.375,442.316,201.032,440.973,199.375,440.973 M208.375,440.973c-1.658,0-3,1.344-3,3c0,1.658,1.342,3,3,3
+								c1.655,0,2.999-1.342,2.999-3C211.374,442.316,210.03,440.973,208.375,440.973 M242.374,449.973h-51.999h-3v12h42.999h3h10.4h1.6
+								v-12H242.374z"/>
+						</g>
+					</g>
+					</svg>
+				</section>
+
+				<section id="new-model-trust-boundry" data-transition="fade" data-background-transition="fade">
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 width="424.04px" height="700px" viewBox="0 0 424.04 800" enable-background="new 0 0 424.04 800" xml:space="preserve" class="center">
+					<g>
+						<g>
+							<circle fill="#01A2A6" cx="214.374" cy="207.343" r="181.69" class="trust-boundry"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M244.522,210.114L244.522,210.114l-28.973,11.989
+								c-0.006,0.002-0.01,0.004-0.014,0.006l-0.014,0.006v-0.001c-0.354,0.146-0.742,0.229-1.146,0.229
+								c-0.406,0-0.793-0.083-1.148-0.229v0.001l-0.012-0.006c-0.006-0.002-0.01-0.004-0.014-0.006l-28.975-11.988v-0.001
+								c-1.087-0.451-1.853-1.521-1.853-2.771c0-1.657,1.343-3,3-3c0.406,0,0.793,0.083,1.147,0.229l0,0l0.014,0.006
+								c0.004,0.001,0.008,0.003,0.013,0.005l27.828,11.514l27.826-11.514c0.004-0.002,0.008-0.004,0.014-0.005l0.014-0.006l0,0
+								c0.354-0.146,0.74-0.229,1.146-0.229c1.656,0,3,1.343,3,3C246.376,208.594,245.61,209.663,244.522,210.114 M244.522,197.114
+								L244.522,197.114l-28.973,11.989c-0.006,0.002-0.01,0.004-0.014,0.006l-0.014,0.006v-0.001c-0.354,0.146-0.742,0.229-1.146,0.229
+								c-0.406,0-0.793-0.083-1.148-0.229v0.001l-0.012-0.006c-0.006-0.002-0.01-0.004-0.014-0.006l-28.975-11.988v-0.001
+								c-1.087-0.451-1.853-1.521-1.853-2.771s0.766-2.32,1.853-2.771l0,0l28.975-11.989c0.004-0.002,0.008-0.004,0.014-0.006
+								l0.012-0.005l0,0c0.355-0.146,0.742-0.229,1.148-0.229c0.404,0,0.793,0.083,1.146,0.229l0,0l0.014,0.005
+								c0.004,0.002,0.008,0.004,0.014,0.006l28.973,11.989l0,0c1.088,0.451,1.854,1.521,1.854,2.771S245.61,196.663,244.522,197.114
+								 M185.375,217.343c0.406,0,0.793,0.083,1.147,0.229l0,0l0.014,0.006c0.004,0.001,0.008,0.003,0.013,0.005l27.828,11.514
+								l27.826-11.514c0.004-0.002,0.008-0.004,0.014-0.005l0.014-0.006l0,0c0.354-0.146,0.74-0.229,1.146-0.229c1.656,0,3,1.343,3,3
+								c0,1.25-0.766,2.32-1.854,2.771v0.001l-28.973,11.988c-0.006,0.002-0.01,0.004-0.014,0.006l-0.014,0.006v-0.001
+								c-0.354,0.146-0.742,0.229-1.146,0.229c-0.406,0-0.793-0.083-1.148-0.229v0.001l-0.012-0.006c-0.006-0.002-0.01-0.004-0.014-0.006
+								l-28.975-11.988v-0.001c-1.087-0.451-1.853-1.521-1.853-2.771C182.375,218.686,183.717,217.343,185.375,217.343"/>
+						</g>
+						<g>
+							<circle fill="#29D9C2" cx="214.375" cy="589.24" r="187.547" class="trust-boundry"/>
+							<g>
+								<g>
+									<circle fill="#FFFFFF" cx="288.671" cy="662.714" r="49.896" class="trust-boundry"/>
+									<text transform="matrix(1 0 0 1 265.7646 668.4189)" fill="#29D9C2" font-family="'HelveticaNeue-Bold'" font-size="15.4726">Model</text>
+								</g>
+								<g>
+									<circle fill="#FFFFFF" cx="141.33" cy="662.714" r="49.896" class="trust-boundry"/>
+									<text transform="matrix(1 0 0 1 123.9155 668.4189)" fill="#29D9C2" font-family="'HelveticaNeue-Bold'" font-size="15.4726">View</text>
+								</g>
+								<g>
+									<circle fill="#FFFFFF" cx="215.875" cy="573.229" r="49.896" class="trust-boundry"/>
+									<text transform="matrix(1 0 0 1 179.0659 578.9316)" fill="#29D9C2" font-family="'HelveticaNeue-Bold'" font-size="15.4726">Controller</text>
+								</g>
+							</g>
+							<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M245.374,493.973h-57.999c-1.657,0-3-1.342-3-3v-50
+								c0-1.656,1.343-3,3-3h57.999c1.656,0,3,1.344,3,3v50C248.374,492.631,247.03,493.973,245.374,493.973 M233.374,490.973h12v-26
+								h-1.6h-10.4V490.973z M187.375,490.973h42.999v-26h-42.999V490.973z M190.375,440.973c-1.657,0-3,1.344-3,3c0,1.658,1.343,3,3,3
+								s3-1.342,3-3C193.375,442.316,192.032,440.973,190.375,440.973 M199.375,440.973c-1.657,0-3,1.344-3,3c0,1.658,1.343,3,3,3
+								s3-1.342,3-3C202.375,442.316,201.032,440.973,199.375,440.973 M208.375,440.973c-1.658,0-3,1.344-3,3c0,1.658,1.342,3,3,3
+								c1.655,0,2.999-1.342,2.999-3C211.374,442.316,210.03,440.973,208.375,440.973 M242.374,449.973h-51.999h-3v12h42.999h3h10.4h1.6
+								v-12H242.374z"/>
+						</g>
+					</g>
+					</svg>
 				</section>
 
 				<section class="listing" id="xss-antipattern">
@@ -116,7 +290,7 @@
 					<h2>The concepts in clientside security are getting more complex</h2>
 				</section>
 
-				<section class="listing" data-background="#BD4932" data-transition="fade" data-background-transition="fade" id="clientside-attacks">
+				<section class="listing" data-background="#BD4932" id="clientside-attacks">
 					<h4>Purely clientside attacks</h4>
 					<ul>
 						<li>Content spoofing</li>
@@ -157,9 +331,8 @@ if (message.origin.indexOf("foo.com") !== -1) { /* ... */ }
 					<ul>
 						<li >Don't store sensitive information in <code>localStorage</code>/<code>IndexDB</code> (dump and pump attacks, no content protection like cookies)</li>
 						<li >Use <code>sessionStorage</code> instead of <code>localStorage</code> if persistent storage is not needed</li>
-						<li >Every object is shared within an origin and protected with the Same Origin Policy. Avoid host multiple applications on the same origin that utilise <code>localStorage</code></li>
+						<li >Every object is shared within an origin and protected with the Same Origin Policy. Be careful when hosting multiple applications on the same origin that utilise <code>localStorage</code></li>
 						<li >Watch out for cache poisoning when caching assets to <code>localStorage</code></li>
-						<li>SQL injection in WebSQL</li>
 					</ul>
 					</small>
 				</section>
@@ -169,7 +342,7 @@ if (message.origin.indexOf("foo.com") !== -1) { /* ... */ }
 					<h3>WebWorkers</h3>
 					<small>
 					<ul>
-						<li >It's trivially easy to perform DOS attacks that exploit resource heavy CPU opertions (e.g. recursive Fibonacci factoring) in WebWorkers, in some cases bricking the client</li>
+						<li >It's relativley easy to perform DOS attacks that exploit resource heavy CPU opertions (e.g. recursive Fibonacci/prime factoring) in WebWorkers, in some extreme cases bricking the client</li>
 					</ul>
 					</small>
 				</section>
@@ -194,6 +367,18 @@ if (message.origin.indexOf("foo.com") !== -1) { /* ... */ }
 						<ul>
 							<li >Cache poisoning <code>manifest</code> files through MITM attacks over insecure networks. Use HTTPS.</li>
 							<li>ServiceWorkers? A potential solution</li>
+						</ul>
+					</small>
+					<p><small>Watch out for <a href="https://github.com/Joe8Bit/metaspolit-manifest-poisoning">Joe8Bit/metaspolit-manifest-poisoning</a> in the coming days</small></p>
+				</section>
+
+				<section class="listing" data-background="#BD4932" id="hardware">
+					<h4>Misc API's</h4>
+					<h3>Hardware API's</h3>
+					<small>
+						<ul>
+							<li>Battery API / Vibration API</li>
+							<li>Phone dialler API / Message API / Settings API / Contacts API (FirefoxOS)</li>
 						</ul>
 					</small>
 				</section>
@@ -229,7 +414,7 @@ if (message.origin.indexOf("foo.com") !== -1) { /* ... */ }
 				</section>
 
 				<section id="drivers-are-out-of-date" data-background="#cf9430">
-					<h3>GPU drivers are usually out of date<sup><small>1</small></sup></h3>
+					<h3>GPU drivers are often out of date<sup><small>1</small></sup></h3>
 					<h4><sup><small>1</small></sup><a href="http://store.steampowered.com/hwsurvey/videocard/">25% of Steam users using DirectX 10 capabale</a></h4>
 				</section>
 
@@ -249,19 +434,42 @@ if (message.origin.indexOf("foo.com") !== -1) { /* ... */ }
 				</section>
 
 				<section id="webgls-fundamental-change" data-background="#cf9430">
-					<h3>Which leads us to WebGL's biggest (unmitigatable) issue...</h3>
+					<h3><strong>Which leads to the fundamental challenge...</strong></h3>
 				</section>
 
-				<section class="listing" id="execution-context" data-background="#cf9430">
+				<section class="listing" id="classic-execution-context" data-background="#cf9430">
 					<h4>Classic browser execution context</h4>
-					<h3>Browser sandboxes -> OS User Mode</h3>
-					<h4>WebGL execution context</h4>
-					<h3>Browser sandboxes -> OS Kernal Mode -> Hardware drivers</h3>
+					<h3>Sandboxes all the way down</h3>
+					<small>
+					<ul>
+						<li>Process/tab isolation</li>
+						<li>The browser sandbox</li>
+						<li>OS process isolation</li>
+						<li>General user mode protections</li>
+					</ul>
+					</small>
 				</section>
+
+				<section class="listing" id="webgl-execution-context" data-background="#cf9430">
+					<h4>WebGL execution context</h4>
+					<h3>Not so much with the sandboxes</h3>
+					<small>
+						<ul>
+							<li>"Process/tab isolation"</li>
+							<li>Browser sandbox</li>
+							<li>WebGL backend</li>
+							<li>Kernel mode</li>
+						</ul>
+					</small>
+				</section>		
 
 				<section class="listing" id="webgl-attack" data-background="#cf9430">
 					<h4>An attacked WebGL call stack</h4>
 					<img src="./imgs/webgl.svg" alt="WebGL" class="no-shadow">
+				</section>
+
+				<section id="webgl-is-awesome" data-background="#cf9430">
+					<h2><strong>WebGL is awesome</strong></h2>
 				</section>
 
 				<section id="testing" data-background="#5C832F">
@@ -352,6 +560,7 @@ if (message.origin.indexOf("foo.com") !== -1) { /* ... */ }
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 				transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
+				transitionSpeed: 'slow',
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
